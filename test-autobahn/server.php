@@ -24,6 +24,7 @@ Amp\Loop::run(function (): Promise {
         ->withFrameSizeLimit(\PHP_INT_MAX)
         ->withFramesPerSecondLimit(\PHP_INT_MAX)
         ->withMessageSizeLimit(\PHP_INT_MAX)
+        ->withCompression()
         ->withValidateUtf8(true);
 
     $websocket = new Websocket(new class implements ClientHandler {
